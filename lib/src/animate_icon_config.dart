@@ -277,7 +277,7 @@ enum AnimateIcons {
       case AnimateIcons.downArrow:
         return 'assets/down-arrow.json';
       case AnimateIcons.error:
-        return 'assets/fatal-error.json';
+        return 'assets/error.json';
       case AnimateIcons.home:
         return 'assets/home.json';
       case AnimateIcons.info:
