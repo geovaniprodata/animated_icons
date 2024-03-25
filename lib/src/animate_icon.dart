@@ -107,7 +107,7 @@ class _AnimateIconState extends State<AnimateIcon> with TickerProviderStateMixin
               iconTypeAction();
             }
           },
-          animate: widget.iconType == IconType.animatedOnTap,
+          animate: widget.iconType == IconType.animatedOnTap || widget.iconType == IconType.onceMounted,
           height: widget.height,
           width: widget.width,
           addRepaintBoundary: true,
