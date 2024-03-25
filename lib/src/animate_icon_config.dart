@@ -1,12 +1,6 @@
 /// [IconType] is state of animation for [AnimateIcons]
 /// Using it animation behaviour is described
-enum IconType {
-  animatedOnTap,
-  animatedOnHover,
-  continueAnimation,
-  onlyIcon,
-  toggleIcon
-}
+enum IconType { animatedOnTap, animatedOnHover, continueAnimation, onlyIcon, toggleIcon }
 
 extension MyEnumExtension on IconType {
   String get spacedCapitalizedString {
@@ -132,11 +126,10 @@ enum AnimateIcons {
   loading4,
   loading5,
   loading6,
-  loading7
-}
+  loading7,
+  warning;
 
-/// [AnimatedIconsExtension] is used to return relevant filepath depend on [AnimateIcons]
-extension AnimatedIconsExtension on AnimateIcons {
+  /// [getAnimatedLottieIcon] is used to return relevant filepath depend on [AnimateIcons]
   String getAnimatedLottieIcon() {
     switch (this) {
       case AnimateIcons.bell:
@@ -355,6 +348,8 @@ extension AnimatedIconsExtension on AnimateIcons {
         return 'assets/loading_6.json';
       case AnimateIcons.loading7:
         return 'assets/loading_7.json';
+      case AnimateIcons.warning:
+        return 'assets/warning.json';
       default:
         return 'assets/heart.json';
     }
