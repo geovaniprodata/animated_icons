@@ -1,6 +1,6 @@
 /// [IconType] is state of animation for [AnimateIcons]
 /// Using it animation behaviour is described
-enum IconType { animatedOnTap, animatedOnHover, continueAnimation, onlyIcon, toggleIcon }
+enum IconType { animatedOnTap, animatedOnHover, continueAnimation, onlyIcon, toggleIcon, onceMounted }
 
 extension MyEnumExtension on IconType {
   String get spacedCapitalizedString {

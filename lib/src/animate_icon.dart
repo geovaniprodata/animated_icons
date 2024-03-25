@@ -57,8 +57,7 @@ class AnimateIcon extends StatefulWidget {
 }
 
 /// State class of the [AnimateIcon]
-class _AnimateIconState extends State<AnimateIcon>
-    with TickerProviderStateMixin {
+class _AnimateIconState extends State<AnimateIcon> with TickerProviderStateMixin {
   /// Used to control the behaviour of the animation
   late final AnimationController _animationController;
 
@@ -125,24 +124,18 @@ class _AnimateIconState extends State<AnimateIcon>
   void iconTypeAction() {
     switch (widget.iconType) {
       case IconType.animatedOnHover:
-        _animationController
-            .forward()
-            .then((value) => _animationController.reset());
+        _animationController.forward().then((value) => _animationController.reset());
         break;
 
       case IconType.onlyIcon:
         break;
 
       case IconType.animatedOnTap:
-        _animationController
-            .forward()
-            .then((value) => _animationController.reset());
+        _animationController.forward().then((value) => _animationController.reset());
         break;
 
       case IconType.continueAnimation:
-        _animationController
-            .forward()
-            .then((value) => _animationController.repeat());
+        _animationController.forward().then((value) => _animationController.repeat());
 
         break;
       case IconType.toggleIcon:
@@ -153,6 +146,8 @@ class _AnimateIconState extends State<AnimateIcon>
         }
 
         break;
+      case IconType.onceMounted:
+        _animationController.forward().then((value) => _animationController.reset());
     }
   }
 
